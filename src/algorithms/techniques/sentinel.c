@@ -21,15 +21,22 @@ while (x != a[i])   /* Using a sentinel is faster than using          */
    in a[i] through a[i+(n-1)] to the values in  b[j] through b[j+(n-1)].
 */
 int equalseq(int *p, int *q, int n)
-{ int temp, *qn; // initialize temp
-  qn = q + n; 
-  temp = *qn;
-  *qn = *(p+n) + 1;
+{ int temp, *qn; 
+  qn = q + n; /* since we count the initial position, q + n is one place beyond the last
+                 element being compared. */
+  temp = *qn; /* we change qn in order to guarantee a non-equivalence. thus, we must save
+                 a temp value in order to set qn back to the original value. */
+  *qn = *(p+n) + 1; /* q[n] and p[n] are now guaranteed to differ. */
   while (*p++ == *q++)
-  { // ;
+  { /* this compact while loop first tests to see if the value at p and q are equivalent.
+       it then increments the address values of both p and q. if p and q were equivalent, 
+       then this process continues until they are not equivalent (which is guaranteed after n
+       iterations). p and q are still incremented before control flow moves beyond the scope
+       of the loop. thus, when p[n] != q[n], which is guaranteed, q is incremented to q[n+1].
+       q[n+1] equals (qn + 1) and will have a value greater than qn. Thus, when q > qn,
+       the tested sequence is equivalent and the function returns true. If an earlier 
+       condition fails, then q is less than qn and the function returns false.*/ 
   }
   *qn = temp /* Restore old q[n] */
   return q > qn;
 }
-
-
