@@ -1,6 +1,6 @@
 # data-structures-and-algorithms
 
-I. Basic Data Structures (Linear Data Structures):
+## I. Basic Data Structures (Linear Data Structures):
     1. Arrays
     2. Strings
     3. Linked List
@@ -14,14 +14,14 @@ I. Basic Data Structures (Linear Data Structures):
         - Dequeue (Double Ended Queue)
         - Circular Queue
 
-II. Advanced Linear Data Structures:
+## II. Advanced Linear Data Structures:
     1. Hash Table
     2. Set
     3. Map
     4. Multimap
     5. Multiset
 
-III. Hierarchical Data Structures:
+## III. Hierarchical Data Structures:
     1. Trees
         - Binary Tree
         - Binary Search Tree
@@ -41,7 +41,7 @@ III. Hierarchical Data Structures:
         - Cyclic Graph
         - Acyclic Graph
 
-IV. Specialized Data Structures:
+## IV. Specialized Data Structures:
     1. Trie (Prefix Tree)
     2. Suffix Tree / Suffix Array
     3. Disjoint Set (Union-Find)
@@ -49,7 +49,7 @@ IV. Specialized Data Structures:
     5. Sparse Table
     6. Merkle Tree
 
-V. Basic Algorithms:
+## V. Basic Algorithms:
     1. Sorting Algorithms
         - Quick Sort
         - Merge Sort
@@ -74,7 +74,7 @@ V. Basic Algorithms:
     4. Greedy Algorithms
     5. Dynamic Programming
 
-VI. Advanced Algorithms:
+## VI. Advanced Algorithms:
     1. Graph Algorithms
         - Dijkstra's Algorithm
         - Prim's Algorithm
