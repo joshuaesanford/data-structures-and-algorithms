@@ -1,0 +1,28 @@
+A singly linked list is a linear data structure composed of nodes where each node contains a data element and a reference (or link) to the next node in the sequence. This allows for efficient insertions or removals from the list without reorganizing the entire data structure. 
+
+1. Node Structure:
+Each node of the singly linked list will contain two components:
+   a. Data: This component will hold the data value. The data type can be any valid data type based on the implementation requirement.
+   b. Next: This component is a pointer that points to the next node in the list. If it points to Null, then it is the last node in the list.
+
+2. Head:
+The head is a reference to the first node in the linked list. If the list is empty, then head is a null reference.
+
+Characteristics:
+
+1. Singly linked lists are dynamic, which means they can grow and shrink at runtime by allocating and deallocating memory.
+2. There is no contiguous memory requirement as each node can reside anywhere in the memory and is linked to its next node via its ‘next’ pointer.
+3. They do not have a fixed size and can extend up to all the available memory space.
+4. Accessing an element in a singly linked list requires sequential access and hence, access to elements is slower compared to arrays.
+
+Operations:
+
+The following operations can be performed on a singly linked list:
+
+1. Insertion: To add a new node in the list.
+2. Deletion: To delete any node from the list.
+3. Display: To display the contents of the list.
+4. Search: To search for an element in the list.
+5. Update: To update the value of an existing node.
+
+This specification categorizes a singly linked list as a linear data structure because it maintains a linear order of elements where each element is connected to its previous and next element in a specific order. The elements are arranged sequentially and each element is connected to the next element via a pointer, which makes it a linear data structure.

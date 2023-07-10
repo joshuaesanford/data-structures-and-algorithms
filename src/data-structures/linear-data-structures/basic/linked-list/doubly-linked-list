@@ -1,0 +1,23 @@
+1. Node Structure: Each node in a doubly linked list contains three fields, namely, data and two addresses, previous and next. The data field stores the information, while the previous and next fields store the addresses of the previous and next node in the list.
+
+2. Head and Tail: The head of the doubly linked list points to the first node, and the tail points to the last node. 
+
+3. Null Termination: Both the previous field of the head node and the next field of the tail node points to null, indicating the end of the list.
+
+4. Insertion:
+   - At the beginning: A new node is added before the head node. The head pointer is updated to the new node.
+   - At the end: A new node is added after the tail node. The tail pointer is updated to the new node.
+   - In between: A new node is added in between two existing nodes by updating the next field of the node before it and the previous field of the node after it.
+
+5. Deletion:
+   - From the beginning: The head node is removed by updating the head pointer to the next node and setting the previous field of the new head node to null.
+   - From the end: The tail node is removed by updating the tail pointer to the previous node and setting the next field of the new tail node to null.
+   - From between: A node is removed from between two nodes by updating the next field of the node before it and the previous field of the node after it.
+
+6. Traversal: The list can be traversed starting from the head to the tail or vice versa.
+
+7. Search: Searching for a particular element involves traversing the list starting from the head and checking the data field of each node.
+
+Doubly Linked List as a Linear Data Structure:
+
+A doubly linked list is a linear data structure because it organizes data in a sequential manner. Each element in the list has a unique predecessor and successor except for the first (head) and last (tail) elements. The elements are connected in such a way that they form a single, non-branching path, which is a characteristic of linear data structures.
