@@ -1,0 +1,26 @@
+1. Overview:
+
+An `Array` is a fundamental data structure which contains elements of similar data types organized in a consecutive memory location. Each element in the array can be uniquely identified by its index.
+
+2. Properties:
+
+2.1. Arrays are linear data structures, as they store elements in a sequential manner.
+2.2. The array should have a fixed size, defined at the time of its creation.
+2.3. Each element in the array should be of the same data type.
+2.4. The elements of an array are stored in contiguous memory locations.
+2.5. Elements in the array are identified by their index, which starts typically from zero.
+
+3. Operations:
+
+3.1. Initialization: The array must be initialized with a specific size and type at the time of creation.
+3.2. Insertion: An element can be added at a specific index in the array.
+3.3. Deletion: An element at a specific index in the array can be removed.
+3.4. Access: A specific element in the array can be accessed directly via its index.
+3.5. Update: The value of a specific element in the array can be updated via its index.
+
+4. Limitations:
+
+4.1. The size of the array is static and needs to be known at compile time. It cannot be changed dynamically. 
+4.2. Insertion and deletion operations are expensive as the elements need to be shifted to maintain contiguity.
+
+This specification implies that the array is a type of linear data structure. This is due to the fact that all elements in the array are arranged sequentially, and each element (except the first and last) has exactly one predecessor and one successor. Also, elements are accessed in a linear order, either beginning from the first element or from the last.

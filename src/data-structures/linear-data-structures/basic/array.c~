@@ -1,0 +1,31 @@
+#include <stdio.h>
+#define MAX 100 // max size of array
+
+int main()
+{ int arr[MAX]; // declaraing an array of integers
+  int i, num;
+  // initializing the array elements
+  printf("Enter the number of elements to be stored in the array: ");
+  scanf("%d", &num);
+  if (num > MAX)
+  { printf("Error! The array can hold up to %d elements.\n", MAX);
+    return 0;
+  }
+  printf("Enter elements in array: ");
+  for (i = 0; i < num; i++)
+  { scanf("%d", &arr[i]);
+  }
+  // accessing and printing the array elements
+  printf("Elements in array are: ");
+  for (i = 0; i < num; i++)
+  { printf("%d ", arr[i]);
+  }
+
+  // updating an element in the array
+  printf("\nEnter the index to update: ");
+  scanf("%d", &i);
+  if (i < 0 || i >= num)
+  { printf("Invalid index!\n");
+    return 0;
+  }
+}

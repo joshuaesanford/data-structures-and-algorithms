@@ -1,0 +1,21 @@
+1. Definition: A string is a sequence of characters. Each character in the sequence can be accessed sequentially. Strings are a type of linear data structure where elements are stored in a non-hierarchical manner and can be traversed in a single run.
+
+2. Operations:
+   - Creation: A string can be created by sequentially adding characters.
+   - Access: Individual characters in the string can be accessed using their index, starting from 0.
+   - Manipulation: The string can be manipulated by adding, replacing, or removing characters.
+   - Concatenation: Two or more strings can be joined end-to-end to form a new string.
+   - Length: The number of characters in the string can be determined.
+   - Comparison: Two strings can be compared lexicographically.
+   - Search: A specific character or substring can be searched within the string.
+   - Conversion: The string can be converted to other data types and vice versa.
+
+3. Properties:
+   - Immutable or Mutable: Depending on the system, a string can be either mutable (can be changed after it's created) or immutable (cannot be changed after it's created).
+   - Size: The size of a string is equal to the number of characters it contains. Some systems might include an additional character for the end of the string (usually null or '\0').
+
+4. Constraints: 
+   - The index used to access individual characters must be within the bounds of the string's size.
+   - When concatenating strings, the total length must not exceed the maximum size allowed by the system.
+
+This specification confirms that the string is a linear data structure as it allows for sequential access, and elements (characters) are stored in a continuous, non-hierarchical manner. The operations such as accessing, searching, and manipulating are performed in a linear fashion.
