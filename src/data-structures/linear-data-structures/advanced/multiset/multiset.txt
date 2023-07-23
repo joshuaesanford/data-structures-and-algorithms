@@ -1,0 +1,30 @@
+1. Description:
+A Multiset (also known as a bag) is an abstract data type that generalizes the concept of a set. It is a collection of elements similar to sets, but unlike sets, multiple occurrences of an element can be stored in it.
+
+2. Structure:
+- It allows elements to have duplicate occurrences, i.e., elements can be repeated.
+- The order of elements does not matter in a multiset.
+- It can contain any type of elements - integers, strings, floats, objects, etc.
+
+3. Operations:
+
+3.1 Insertion: 
+- add(element): This operation is used to add an element to the multiset. If the element already exists, its count is incremented.
+
+3.2 Deletion:
+- remove(element): This operation is used to remove an element from the multiset. If the element occurs more than once, its count is decremented by one.
+
+3.3 Query:
+- count(element): This operation returns the number of occurrences of an element in the multiset. If the element does not exist, it returns 0.
+- contains(element): This operation checks if the element exists in the multiset. It returns true if the element exists; otherwise, it returns false.
+- size(): This operation returns the total number of elements (counting duplicates) in the multiset.
+- isEmpty(): This operation checks if the multiset is empty. It returns true if there are no elements in the multiset; otherwise, it returns false.
+
+3.4 Other operations:
+- clear(): This operation removes all the elements from the multiset.
+- toArray(): This operation returns an array of all elements in the multiset (including duplicates).
+
+4. Constraints:
+- All elements in the multiset should be of the same data type.
+
+Note: The performance of these operations may vary depending on the implementation. For example, operations like add, remove, and count could be expected to perform in constant time in a hash-based implementation, but may require logarithmic time in a tree-based implementation.

@@ -1,0 +1,46 @@
+1. Overview:
+A Set is a collection type data structure that stores non-duplicate items in no particular order. It allows storing, removing, and checking the existence of items in a quick and efficient manner.
+
+2. Details:
+
+2.1 Data Storage: 
+The Set data structure should be able to store any type of elements including integers, floating-point numbers, strings, and objects. However, it should not store duplicate elements.
+
+2.2 Order of Elements: 
+The Set data structure does not maintain any specific order of elements. However, it should provide functionality to iterate through the elements.
+
+2.3 Size:
+The Set data structure should have a property that allows users to get the number of elements currently stored in the Set. 
+
+3. Operations:
+
+3.1 Add: 
+This operation should allow users to add a new element to the Set. If the element already exists in the Set, the operation should not change the Set.
+
+3.2 Remove:
+This operation should allow users to remove an element from the Set. If the element does not exist in the Set, the operation should not change the Set.
+
+3.3 Contains:
+This operation should allow users to check whether an element exists in the Set. It should return a boolean value - true if the element exists, false otherwise.
+
+3.4 Size:
+This operation should return the number of elements currently stored in the Set.
+
+3.5 Clear:
+This operation should remove all elements from the Set.
+
+3.6 Iterator:
+This operation should return an iterator that allows users to traverse through the elements in the Set.
+
+4. Performance:
+
+4.1 The add, remove, and contains operations should ideally work in constant time - O(1). However, in some cases, these operations may work in logarithmic time - O(log n).
+
+4.2 The size operation should work in constant time - O(1).
+
+4.3 The clear operation should work in linear time - O(n), where n is the number of elements in the Set.
+
+4.4 The iterator operation should work in linear time - O(n), where n is the number of elements in the Set.
+
+5. Use Cases:
+A Set data structure can be used in various scenarios where we need to store unique elements and perform operations like add, remove, and contains in a quick and efficient manner. Some of the common use cases include checking for duplicates, membership tests, finding intersections, unions, and differences, etc.

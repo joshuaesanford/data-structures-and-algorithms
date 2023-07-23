@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include<stdlib.h>
 
-// Node structure
 typedef struct Node
 { int data;
   struct Node* next;
@@ -12,16 +11,17 @@ Node* create_node(int data);
 void insert_at_beginning(Node** start, int data);
 void insert_after(Node* prev_node, int data);
 void insert_at_end(Node** start, int data);
-void delete_node(Node** head_ref, Node* del);
+int delete_node(Node** head_ref, Node* del);
 void display(Node* node);
 void display_reverse(Node* node);
 Node* search(Node* head, int key);
 int search_pos(Node* head, int key);
-void update_node(Node* node, int data);
+int update_node(Node* node, int data);
+int get_size(Node* node);
 
-Node* create_node(int data) 
+Node* create_node(int data)
 { Node* new_node = (Node*)malloc(sizeof(Node));
-  if (new_node == NULL) 
+  if (new_node == NULL)
   { printf("Memory allocation failed\n");
     exit(0);
   }
@@ -31,33 +31,34 @@ Node* create_node(int data)
   return new_node;
 }
 
-void insert_at_beginning(Node** start, int data) 
+void insert_at_beginning(Node** start, int data)
 { Node* new_node = create_node(data);
   new_node->next = *start;
   if (*start != NULL)
   { (*start)->prev = new_node;
   }
   *start = new_node;
+
 }
 
-void insert_after(Node* prev_node, int data) 
-{ if (prev_node == NULL) 
+void insert_after(Node* prev_node, int data)
+{ if (prev_node == NULL)
   { printf("the given previous node cannot be NULL");
     return;
-   }
-   Node* new_node = create_node(data);
-   new_node->next = prev_node->next;
-   new_node->prev = prev_node;
-   prev_node->next = new_node;
-   if (new_node->next != NULL)
-   { new_node->next->prev = new_node;
-   }
+  }
+  Node* new_node = create_node(data);
+  new_node->next = prev_node->next;
+  new_node->prev = prev_node;
+  prev_node->next = new_node;
+  if (new_node->next != NULL)
+  { new_node->next->prev = new_node;
+  }
 }
 
-void insert_at_end(Node** start, int data) 
+void insert_at_end(Node** start, int data)
 { Node* new_node = create_node(data);
   Node* last = *start;
-  if (*start == NULL) 
+  if (*start == NULL)
   { *start = new_node;
     return;
   }
@@ -68,9 +69,9 @@ void insert_at_end(Node** start, int data)
   new_node->prev = last;
 }
 
-void delete_node(Node** head_ref, Node* del) 
+int delete_node(Node** head_ref, Node* del)
 { if (*head_ref == NULL || del == NULL)
-  { return;
+  { return -1;
   }
   if (*head_ref == del)
   { *head_ref = del->next;
@@ -82,67 +83,82 @@ void delete_node(Node** head_ref, Node* del)
   { del->prev->next = del->next;
   }
   free(del);
+  del = NULL;
+  return 0;
 }
 
-void display(Node* node) 
-{ while (node != NULL) 
+void display(Node* node)
+{ while (node != NULL)
   { printf(" %d ", node->data);
     node = node->next;
   }
 }
 
-void display_reverse(Node* node) 
+void display_reverse(Node* node)
 { Node* last;
   printf("\nTraversal in reverse direction \n");
-  while(node != NULL) 
+  while(node != NULL)
   { last = node;
     node = node->next;
   }
-  while(last != NULL) 
+  while(last != NULL)
   { printf(" %d ", last->data);
     last = last->prev;
   }
 }
 
-Node* search(Node* head, int key) 
+Node* search(Node* head, int key)
 { Node* current = head;
-  while (current != NULL) 
+  while (current != NULL)
   { if (current->data == key)
-    {    return current;
+    { return current;
     }
     current = current->next;
   }
-  return NULL;  // not found
+  return NULL;
 }
 
-int search_pos(Node* head, int key) 
+int search_pos(Node* head, int key)
 { Node* current = head;
   int pos = 0;
-  while (current != NULL) 
+  while (current != NULL)
   { if (current->data == key)
     { return pos;
     }
     current = current->next;
     pos++;
   }
-  return -1;  // not found
+  return -1;
 }
 
-void update_node(Node* node, int data) 
-{ if(node != NULL)
-  { node->data = data;
+int update_node(Node* node, int data)
+{ if(node == NULL)
+  { return -1;
   }
+  node->data = data;
+  return 0;
 }
 
-int main() 
+int get_size(Node* node)
+{ int size = 0;
+  while (node != NULL)
+  { size++;
+    node = node->next;
+  }
+  return size;
+}
+
+int main()
 { Node* head = NULL;
   insert_at_beginning(&head, 5);
   insert_at_beginning(&head, 4);
   insert_at_end(&head, 8);
   insert_at_end(&head, 9);
   insert_after(head->next, 6);
+
   printf("\n Doubly Linked list is: ");
   display(head);
+
   printf("\n Doubly Linked list in reverse is: ");
   display_reverse(head);
 
@@ -160,10 +176,19 @@ int main()
   }
   else
   { printf("\n Element not found");
-  } 
-  update_node(found, 7);
+  }
+
+  if(update_node(found, 7) == 0)
+  { printf("\n Update successful");
+  }
+  else
+  { printf("\n Update failed - node not found");
+  }
+
   printf("\n Doubly Linked list after update is: ");
   display(head);
+
+  printf("\n Size of list is: %d", get_size(head));
 
   return 0;
 }

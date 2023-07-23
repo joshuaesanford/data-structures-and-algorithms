@@ -1,0 +1,37 @@
+1. Overview: 
+    A Simple Queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. It has two endpoints, known as the front and the rear. The front is the place where items are removed, and the rear is the place where items are added.
+
+2. Functions:
+
+   2.1 enqueue(element): 
+       This function adds an element at the end (rear) of the queue. If the queue is full, it will not add the element and return an error or exception indicating the queue is full.
+     
+   2.2 dequeue(): 
+       This function removes an element from the front of the queue. If the queue is empty, it will not remove anything and instead, it will return an error or exception indicating the queue is empty.
+
+   2.3 peek(): 
+       This function returns the element at the front of the queue without removing it. If the queue is empty, it returns null or equivalent in implemented language.
+
+   2.4 isEmpty(): 
+       This function checks whether the queue is empty. It returns true if the queue is empty and false if it is not.
+
+   2.5 isFull(): 
+       This function checks whether the queue is full. It returns true if the queue is full and false if it is not.
+
+3. Properties:
+
+   3.1 Size: 
+       The total number of elements that can be stored in the queue.
+   
+   3.2 Count: 
+       The current number of elements in the queue.
+
+4. Error Handling:
+
+   4.1 If the queue is already full and an attempt is made to add (enqueue) an element, an error or exception should be thrown.
+
+   4.2 If the queue is empty and an attempt is made to remove (dequeue) an element, an error or exception should be thrown.
+
+5. Use Case:
+
+    The Simple Queue data structure can be used in various scenarios such as CPU scheduling, Disk Scheduling, in routers for managing the congestion of network traffic, etc.

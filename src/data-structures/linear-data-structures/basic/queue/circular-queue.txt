@@ -1,0 +1,25 @@
+1. Overview:
+The circular queue is a linear data structure which follows the First In First Out (FIFO) principle but unlike normal queues, the last element points to the first element making a circular link.
+
+2. Requirements:
+2.1. The circular queue data structure should have a maximum size N which is declared at the time of initialization.
+2.2. It should have two pointers namely, FRONT and REAR which are initially set to -1 signifying an empty queue.
+2.3. The data structure should be capable of holding any data type.
+
+3. Operations:
+3.1. Enqueue: This operation should add an element at the REAR end of the queue. If the REAR equals to the maximum size of the queue -1, it should wrap around to the start of the queue.
+3.2. Dequeue: This operation should remove an element from the FRONT end of the queue. If the FRONT equals to the maximum size of the queue -1, it should wrap around to the start of the queue.
+3.3. IsEmpty: This operation should check if the queue is empty (i.e., when FRONT equals REAR).
+3.4. IsFull: This operation should check if the queue is full (i.e., when REAR is one position behind FRONT).
+3.5. Peek: This operation should return the element at the FRONT without removing it from the queue.
+
+4. Error Handling:
+4.1. If an attempt is made to enqueue an element in a full queue, an appropriate error message should be returned.
+4.2. Similarly, if an attempt is made to dequeue an element from an empty queue, an appropriate error message should be returned.
+
+5. Efficiency Considerations:
+5.1. The enqueue and dequeue operations should be performed in constant time, i.e., O(1).
+5.2. The space complexity should be O(N), where N is the size of the queue.
+
+6. Usage:
+The circular queue data structure can be used in scenarios where resources are shared between multiple users/threads and are allocated in a cyclic manner, such as CPU scheduling, memory management, etc.

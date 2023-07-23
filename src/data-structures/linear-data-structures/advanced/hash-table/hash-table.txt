@@ -1,0 +1,35 @@
+1. Overview:
+A Hash Table is a data structure that stores key-value pairs. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. Hash Tables support efficient search, insert and delete operations.
+
+2. Data Components:
+   - Key: The unique identifier used to identify a particular item in the hash table.
+   - Value: The data associated with the key.
+   - Hash Function: A function that generates a unique index for each unique key.
+   - Buckets/Slots: The array of storage locations in the hash table.
+
+3. Core Operations:
+   - Insert(key, value): Stores the key-value pair in the hash table.
+   - Get(key): Retrieves the value associated with the given key.
+   - Delete(key): Removes the key-value pair specified by the key.
+   - Contains(key): Checks if the given key exists in the hash table.
+
+4. Structure:
+   - The Hash Table should be implemented as an array of "buckets" or "slots", each of which can store one key-value pair.
+   - The Hash function should ensure that keys are uniformly distributed over the array to prevent clustering and to achieve constant time complexity for search, insert, and delete operations.
+   - In the event of a hash collision (where two keys produce the same hash), the Hash Table should implement a strategy such as chaining (where each bucket holds a linked list of all key-value pairs with the same hash) or open addressing (where alternate buckets are found for the colliding keys).
+
+5. Features:
+   - Size: A method that returns the number of key-value pairs in the hash table.
+   - Load Factor: The number of keys stored in the hash table divided by the capacity. If the load factor exceeds a certain threshold, the hash table should be rehashed (i.e., create a new larger table and move all keys to the new table).
+   - Rehash: A method to increase the capacity of the hash table and re-arrange all the existing key-value pairs.
+
+6. Error Handling:
+   - If a Get or Delete operation is attempted on a key that does not exist in the Hash Table, the operation should return a clear, concise error message.
+
+7. Performance:
+   - The Hash Table data structure should aim for O(1) time complexity for search, insert, and delete operations under typical conditions.
+   - The worst-case time complexity should not exceed O(n), where n is the size of the Hash Table.
+
+8. Constraints:
+   - All keys in the Hash Table should be unique. If an Insert operation is attempted with a key that already exists in the Hash Table, the new value should replace the old value.
+   - The Hash Table should be dynamic - it should be able to grow and shrink in size as key-value pairs are added or removed.

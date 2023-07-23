@@ -1,0 +1,39 @@
+1. Overview:
+    A circular linked list is a refined version of a typical linked list in which the final node in the list points back at the initial node instead of a null value, creating a continuous loop that can be traversed indefinitely.
+
+2. Structure:
+    - Node: The fundamental unit of a circular linked list, which houses the data and a pointer to the subsequent node.
+    - Head: A pointer at the beginning of the list, indicating the first node.
+    - Tail: A pointer at the end of the list, directing back to the initial node rather than a null value.
+
+3. Operations:
+    - Insertion:
+        - At the Start: Add a new node at the beginning of the list.
+        - At the End: Append a new node at the end of the list.
+        - At a Specific Position: Incorporate a new node at a particular position in the list.
+    - Deletion:
+        - From the Start: Remove the node at the beginning of the list.
+        - From the End: Eradicate the node at the end of the list.
+        - From a Specific Position: Extract a particular node from the list.
+    - Traversal: Sequentially visit each node in the list.
+    - Search: Locate a node with a specific value in the list.
+    - Update: Modify the value of a particular node in the list.
+    - Size: Determine the total number of nodes in the list.
+
+4. Constraints:
+    - Each node must house a value and a pointer to the next node.
+    - The next pointer of the final node should direct to the initial node, thereby creating a circular structure.
+    - Operations such as insertion, deletion, search, and update must manage edge cases, such as when the list is empty or contains only one node.
+
+5. Advantages:
+    - Circular linked lists are beneficial in scenarios where the list is traversed repeatedly, as we can navigate the entire list starting from any node.
+    - They are advantageous in resource allocation where each process is afforded an equal opportunity to utilize resources. For example, in a round-robin scheduling algorithm, each process is given an equal amount of CPU time (called a time quantum), after which it is moved to the back of the queue and the next process in line is given control of the CPU. This can be visualized much like a circular assembly line, where each process is a station that gets an equal opportunity to work on their task before passing it along.
+
+6. Disadvantages:
+    - They are more complex to implement compared to singly linked lists.
+    - Care must be taken to avert infinite loops while traversing.
+    - Additional memory is required for the pointer to the next node.
+
+7. Applications:
+    - They are useful in the execution of algorithms that demand cyclic or loop data structures, such as the Round-Robin scheduling algorithm, Fibonacci heap, etc.
+    - They find usage in Operating Systems where certain applications are cyclic in nature, such as a music player, a slideshow, etc.

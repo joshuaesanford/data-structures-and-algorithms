@@ -1,7 +1,7 @@
-/* Implementation of array using integers. Change data type as needed. 
-   
+/* Implementation of array using integers. Change data type as needed.
+
    This file defines a structure `Array` which holds:
-     (1) a pointer to an integer array 
+     (1) a pointer to an integer array
      (2) the capacity of the array
      (3) the current size of the array
 

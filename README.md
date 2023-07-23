@@ -113,3 +113,15 @@
         - 0-1 Knapsack Problem
         - Travelling Salesman Problem
         - Matrix Chain Multiplication
+    7. Caches
+        - First In, First Out (FIFO)
+        - Least Recently Used (LRU)
+        - Random Replacement (RR)
+        - Least Frequently Used (LFU)
+        - Clock with Adaptive Replacement (CAR)
+        - Adaptive Replacement Cache (ARC)
+        - GreedyDual-Size (GDS)
+        - 2Q
+        - Low Inter-reference Recency Set (LIRS)
+        - Multi Queue (MQ)
+        - Hyperbolic Caching

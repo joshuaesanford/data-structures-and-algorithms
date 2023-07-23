@@ -1,0 +1,44 @@
+1. Overview:
+A Priority Queue is a specialized data structure that allows elements to be served based on their priority. It is an abstract data type, similar to a queue or stack, but each element has an additional property: priority. Elements with a higher priority are dequeued before elements with lower priority.
+
+2. Structures and Types:
+
+2.1. Element: Each element in the Priority Queue should have two properties: 'value' which stores the actual data and 'priority' which determines the order of service.
+
+2.2. Priority Queue: The Priority Queue itself should be a collection of 'Element' objects.
+
+3. Operations:
+
+3.1. Insert: This operation should add an 'Element' to the Priority Queue. If two elements have the same priority, they should be served according to their order in the queue.
+
+3.2. Peek: This operation should return the 'Element' with the highest priority without removing it from the Priority Queue.
+
+3.3. Remove: This operation should remove and return the 'Element' with the highest priority from the Priority Queue.
+
+4. Constraints:
+
+4.1. If the Priority Queue is empty, the 'Peek' and 'Remove' operations should return a specific value (e.g., null) or throw an exception.
+
+4.2. The 'Insert', 'Peek', and 'Remove' operations should be performed in a reasonable time complexity.
+
+5. Exception Handling:
+
+5.1. Invalid Element: If an 'Element' with invalid 'value' or 'priority' is attempted to be inserted into the Priority Queue, an exception should be thrown.
+
+5.2. Empty Queue: If 'Peek' or 'Remove' operations are performed on an empty Priority Queue, an exception should be thrown.
+
+6. Optional Features:
+
+6.1. Size: This operation returns the number of elements in the Priority Queue.
+
+6.2. IsEmpty: This operation checks if the Priority Queue is empty.
+
+6.3. Clear: This operation removes all elements from the Priority Queue.
+
+7. Implementation Considerations:
+
+7.1. The Priority Queue could be implemented using various underlying data structures such as an array, linked list, heap, etc.
+
+7.2. The choice of underlying data structure will impact the time complexity of operations.
+
+7.3. The 'priority' can be either lower value indicates higher priority or higher value indicates higher priority. It depends on the specific use case requirement.

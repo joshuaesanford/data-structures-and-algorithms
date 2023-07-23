@@ -1,0 +1,45 @@
+I. Overview:
+
+The Map data structure is a collection of key-value pairs where the key is unique and each key maps to exactly one value. It is also referred to as an associative array, dictionary or symbol table.
+
+II. Requirements:
+
+1. Key-Value Pairs: The Map data structure must allow for the storage of key-value pairs. Each key in the Map must map to exactly one value.
+
+2. Unique Keys: The Map data structure must not allow for duplicate keys. If a key already exists in the Map and a new value is attempted to be assigned to it, the Map must update the existing key with the new value.
+
+3. Null Key/Value: The Map data structure should accept null values for keys and values, but this feature is optional and depends on the specific implementation requirements.
+
+4. Order Preservation: The Map data structure may optionally maintain the insertion order of key-value pairs. This feature is optional and depends on the specific implementation requirements.
+
+5. Size Inquiry: The Map data structure should provide a function to return the count of key-value pairs in the Map.
+
+6. Value Inquiry: The Map data structure should provide a function to return the value associated with a specified key.
+
+7. Key Existence: The Map data structure should provide a function to check if a key exists in the Map.
+
+8. Key-Value Pair Removal: The Map data structure should provide a function to remove a key-value pair from the Map using the specified key.
+
+9. Iteration: The Map data structure should provide a way to iterate over all key-value pairs in the Map.
+
+10. Clear Map: The Map data structure should provide a function to clear all key-value pairs from the Map.
+
+III. Interfaces:
+
+1. Put(key, value): Inserts a new key-value pair into the Map. If the key already exists, updates the value.
+
+2. Get(key): Returns the value associated with the specified key. If the key does not exist, returns a default value or throws an exception.
+
+3. Remove(key): Removes the key-value pair associated with the specified key from the Map.
+
+4. ContainsKey(key): Checks if the specified key exists in the Map.
+
+5. Size(): Returns the number of key-value pairs in the Map.
+
+6. Clear(): Removes all key-value pairs from the Map.
+
+7. Iterator(): Returns an iterator to traverse the Map.
+
+IV. Exceptions:
+
+The Map data structure should properly handle exceptions and provide meaningful error messages whenever an operation fails. For example, when trying to retrieve a value using a nonexistent key, the Map should return a default value or throw an exception, depending on the implementation.
